@@ -8,41 +8,21 @@ Pet::Pet(const std::string& name, const std::string& species, int age, int hunge
     : name(name), species(species), age(age), hungerLevel(hungerLevel) {}
 
 // Accessors
-std::string Pet::getName() const {
-    return name;
-}
-
-std::string Pet::getSpecies() const {
-    return species;
-}
-
-int Pet::getAge() const {
-    return age;
-}
-
-int Pet::getHungerLevel() const {
-    return hungerLevel;
-}
+std::string Pet::getName() const { return name; }
+std::string Pet::getSpecies() const { return species; }
+int Pet::getAge() const { return age; }
+int Pet::getHungerLevel() const { return hungerLevel; }
 
 // Mutators
-void Pet::setName(const std::string& name) {
-    this->name = name;
-}
-
-void Pet::setSpecies(const std::string& species) {
-    this->species = species;
-}
+void Pet::setName(const std::string& name) { this->name = name; }
+void Pet::setSpecies(const std::string& species) { this->species = species; }
 
 void Pet::setAge(int age) {
-    if (age >= 0) {
-        this->age = age;
-    }
+    if (age >= 0) this->age = age;
 }
 
 void Pet::setHungerLevel(int level) {
-    if (level >= 0 && level <= 10) {
-        hungerLevel = level;
-    }
+    if (level >= 0 && level <= 10) hungerLevel = level;
 }
 
 // CompareTo
@@ -59,3 +39,11 @@ void Pet::printInfo() const {
     std::cout << "Age: " << age << std::endl;
     std::cout << "Hunger Level: " << hungerLevel << "/10" << std::endl;
 }
+
+// Added default virtual sound
+void Pet::makeSound() const {
+    std::cout << name << " makes an undefined sound.\n";
+}
+
+// Added destructor definition
+Pet::~Pet() {}

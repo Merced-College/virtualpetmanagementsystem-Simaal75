@@ -29,10 +29,13 @@ public:
     void setHungerLevel(int level);
 
     // CompareTo
-    int compareTo(const Pet& other) const; // Returns -1, 0, or 1 based on name comparison
+    int compareTo(const Pet& other) const;
 
-    // Output Function
-    void printInfo() const;
+    // Added for polymorphism
+    virtual void printInfo() const;   // modified to virtual
+    virtual void makeSound() const;   // added
+
+    virtual ~Pet(); // added virtual destructor
 };
 
 #endif
