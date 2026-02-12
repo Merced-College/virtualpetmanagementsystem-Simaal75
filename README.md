@@ -7,3 +7,8 @@ virtual-pet/
 ├── Pet.cpp
 └── Pet.h
 
+Custom Pet: Goldfish
+
+For my custom pet, I created a Goldfish class that inherits from the Pet base class. The Goldfish has two unique attributes: tankSizeGallons and color. It overrides printInfo() to display the tank size and color, and overrides makeSound() to print a simple “blub blub” sound.
+
+I also added a new method called swim() that allows the goldfish to perform a unique action. The challenge I implemented was using polymorphism by storing the Goldfish in a vector of Pet pointers and calling makeSound() through the base class pointer to make sure the overridden version runs correctly.
